@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Aprendes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aprendes.each do |aprende| %>
+      <tr>
+        <td><%= link_to 'Show', aprende %></td>
+        <td><%= link_to 'Edit', edit_aprende_path(aprende) %></td>
+        <td><%= link_to 'Destroy', aprende, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aprende', new_aprende_path %>
